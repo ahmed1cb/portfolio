@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #141414;
+  --color-bg-elevated: #1c1c1c;
+  --color-bg-card: #1c1c1c;
+  --color-accent: #E8644A;
+  --color-accent-hover: #d4553c;
+  --color-text: #e0ddd8;
+  --color-text-muted: #8a8680;
+  --color-border: #2a2a28;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+::selection {
+  background: rgba(232, 100, 74, 0.25);
+  color: #fff;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-card {
+  border: 1px solid var(--color-border);
+  transition: border-color 0.3s;
+}
+
+.project-card:hover {
+  border-color: #444;
+}
+
+.filter-btn {
+  color: var(--color-text-muted);
+  transition: color 0.2s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  color: var(--color-text);
+}
+
+.nav-link {
+  transition: color 0.2s;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

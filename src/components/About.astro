@@ -1,0 +1,46 @@
+---
+import { skills } from '../data/projects.js';
+---
+
+<section id="about" class="py-28 px-6">
+  <div class="max-w-5xl mx-auto">
+    <p class="text-[var(--color-accent)] font-mono text-sm mb-4 tracking-wide">About</p>
+
+    <div class="grid md:grid-cols-2 gap-16 items-start">
+      <div class="space-y-5">
+        <p class="text-lg text-[var(--color-text-muted)] leading-relaxed">
+          I'm a developer from Egypt who loves building web applications and
+          developer tools. I enjoy working across the full stack, from crafting
+          pixel-perfect UIs to designing robust APIs and databases.
+        </p>
+        <p class="text-[var(--color-text-muted)] leading-relaxed">
+          My work spans social platforms, real-time chat apps, Q&A systems,
+          and CLI tools — always focused on solving real problems and making
+          daily tasks easier.
+        </p>
+        <p class="text-[var(--color-text-muted)] leading-relaxed">
+          I believe in writing clean, maintainable code and continuously
+          expanding my skill set. I've published a Python package on PyPI
+          and I'm always looking for the next thing to build.
+        </p>
+      </div>
+
+      <div>
+        <p class="text-xs uppercase tracking-widest text-[var(--color-text-muted)] mb-5">Tech Stack</p>
+        <div class="flex flex-wrap gap-x-6 gap-y-4">
+          {skills.map((skill) => (
+            <div class="flex items-center gap-2.5 group">
+              <img
+                src={`https://cdn.simpleicons.org/${skill.icon}/8a8680`}
+                alt={skill.name}
+                class="w-4 h-4 group-hover:opacity-100 opacity-60 transition-opacity"
+                loading="lazy"
+              />
+              <span class="text-sm text-[var(--color-text-muted)] group-hover:text-[var(--color-text)] transition-colors">{skill.name}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,62 @@
+---
+---
+
+<section class="min-h-screen flex items-center px-6 pt-20">
+  <div class="max-w-5xl mx-auto w-full">
+    <div class="grid md:grid-cols-5 gap-12 items-center">
+      <div class="md:col-span-3">
+        <p class="text-[var(--color-accent)] font-mono text-sm mb-6 tracking-wide">Hi, I'm</p>
+
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-[1.05]">
+          Ahmed Hassan
+        </h1>
+
+        <p class="text-lg md:text-xl text-[var(--color-text-muted)] mb-4 leading-relaxed">
+          Web & App Developer from Egypt.
+        </p>
+
+        <p class="text-[var(--color-text-muted)] mb-10 leading-relaxed max-w-lg">
+          I build full-stack applications and developer tools that make
+          everyday tasks simpler. Always learning, always shipping.
+        </p>
+
+        <div class="flex items-center gap-4">
+          <a href="#projects" class="px-6 py-3 bg-[var(--color-accent)] text-white text-sm font-medium rounded-lg hover:bg-[var(--color-accent-hover)] transition-colors">
+            View Projects
+          </a>
+          <a href="#contact" class="px-6 py-3 border border-[var(--color-border)] text-[var(--color-text)] text-sm font-medium rounded-lg hover:border-[var(--color-text-muted)] transition-colors">
+            Get in Touch
+          </a>
+        </div>
+      </div>
+
+      <div class="md:col-span-2 hidden md:block">
+        <div class="bg-[var(--color-bg-elevated)] border border-[var(--color-border)] rounded-lg overflow-hidden">
+          <div class="flex items-center gap-1.5 px-4 py-2.5 border-b border-[var(--color-border)]">
+            <div class="w-2.5 h-2.5 rounded-full bg-[#ff5f57]"></div>
+            <div class="w-2.5 h-2.5 rounded-full bg-[#febc2e]"></div>
+            <div class="w-2.5 h-2.5 rounded-full bg-[#28c840]"></div>
+          </div>
+          <div class="p-4 font-mono text-xs leading-relaxed space-y-1.5">
+            <p><span class="text-[var(--color-accent)]">$</span> <span class="text-[var(--color-text)]">cat about.txt</span></p>
+            <p class="text-[var(--color-text-muted)] pl-4">Web & App Developer from Egypt</p>
+            <p class="text-[var(--color-text-muted)] pl-4">Full-stack: React, Laravel, Node.js, Python</p>
+            <p class="text-[var(--color-text-muted)] pl-4">Published on PyPI · 16+ projects</p>
+            <p class="mt-3"><span class="text-[var(--color-accent)]">$</span> <span class="text-[var(--color-text)]">ls current/</span></p>
+            <p class="text-[var(--color-text-muted)] pl-4"><span class="text-[var(--color-text)]">portfolio</span>  <span class="text-[var(--color-text)]">open-source</span>  <span class="text-[var(--color-text)]">learning</span></p>
+            <p class="mt-3"><span class="text-[var(--color-accent)]">$</span> <span id="hero-cursor" class="text-[var(--color-text-muted)]">_</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const cursor = document.getElementById('hero-cursor');
+  setInterval(() => {
+    if (cursor) {
+      cursor.style.opacity = cursor.style.opacity === '0' ? '1' : '0';
+    }
+  }, 530);
+</script>
